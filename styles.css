@@ -135,32 +135,29 @@ html {
 }
 
 
-.vision-section {
-    background-color: #e8f5e9; /* Light green background */
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.vision-container {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.vision-container h2 {
-    font-size: 28px;
-    color: #2e7d32; /* Dark green */
-    margin-bottom: 15px;
-}
-
-.vision-container p {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.6;
-}
+ .vision-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .vision-container {
+            max-width: 800px;
+        }
+        .vision-block {
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+        }
+        .gurpreet {
+            background-color: #0077b6; /* Blue */
+        }
+        .brahmleen {
+            background-color: #d62828; /* Red */
+        }
 
 
 @media (max-width: 768px) {
