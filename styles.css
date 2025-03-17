@@ -43,13 +43,40 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 20px;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background-color: #333;
+    color: white;
+    text-decoration: none; /* Ensures no underline on hover */
 }
 
 .about {
     text-align: center;
     padding: 30px;
-    background-color: #B0EBB4;
+    background-color: #d0f3d3;
 }
+.footer {
+    background-color: #BFF6C3;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-links a {
+    color: #013309;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
 
 
 .outbox {
@@ -92,3 +119,17 @@ html {
     scroll-behavior: smooth;
 }
 
+.text {
+    color:rgb(0, 0, 0);
+}
+
+.About {
+    background-color:rgba(141, 223, 125, 0.7);
+    
+}
+
+.imagebraille{
+    filter: grayscale();
+    height: auto;
+    width: auto;
+}
