@@ -161,3 +161,35 @@ html {
     color: #333;
     line-height: 1.6;
 }
+
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 30px 20px; /* Adjust padding for better fit */
+    }
+
+    .outbox {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .children {
+        height: auto;
+        max-width: 100%;
+    }
+
+}
