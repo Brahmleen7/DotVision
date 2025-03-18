@@ -17,6 +17,9 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
 }
 
 .navbar {
@@ -27,12 +30,24 @@ body {
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .nav-links a {
     margin: 0 15px;
     text-decoration: none;
     color: #000000;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
 }
 
 .cta-button {
@@ -43,6 +58,9 @@ body {
     cursor: pointer;
     margin-top: 20px;
     text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
 }
 
 .cta-button:hover {
@@ -62,6 +80,7 @@ body {
     color: #013309;
     text-decoration: none;
     margin: 0 10px;
+    font-size: 14px;
 }
 
 .footer-links a:hover {
@@ -81,8 +100,17 @@ body {
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .menu-toggle {
         display: block;
+        position: absolute;
+        right: 10px;
+        top: 15px;
     }
     
     .nav-links {
@@ -92,16 +120,30 @@ body {
         top: 60px;
         right: 0;
         background-color: white;
-        width: 200px;
+        width: 100%;
         padding: 10px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
     }
     
     .nav-links.active {
         display: flex;
     }
+    
+    .nav-links a {
+        padding: 12px 0;
+        font-size: 18px;
+    }
+    
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    
+    .footer-links a {
+        font-size: 12px;
+    }
 }
-
 
 @media (min-width: 769px) {
     .nav-links {
