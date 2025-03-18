@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    alert("Neural Queens welcomes you to DotVision!");
+    // Show alert only if not seen before in this session
+    if (!sessionStorage.getItem("welcomeShown")) {
+        alert("Neural Queens welcomes you to DotVision!");
+        sessionStorage.setItem("welcomeShown", "true"); // Store flag in sessionStorage
+    }
     
     const navLinks = document.getElementById("navLinks");
     const toggleButton = document.querySelector(".menu-toggle");
@@ -10,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
 
 // Display image preview
 document.getElementById("imageInput").addEventListener("change", function(event) {
