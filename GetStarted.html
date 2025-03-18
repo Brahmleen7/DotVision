@@ -6,6 +6,14 @@
     <title>Get Started</title>
 </head>
 <body>
-    <h1> Welcome to DotVision</h1>
+   <div class="about">
+        <h2>Upload an Image for AI Processing</h2>
+        <input type="file" id="imageInput" accept="image/png, image/jpeg">
+        <br>
+        <img id="imagePreview" class="preview" style="display: none;">
+        <br>
+        <button class="cta-button" onclick="uploadImage()">Upload & Process</button>
+        <p id="outputText" class="output"></p>
+    </div>
 </body>
 </html>
