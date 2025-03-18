@@ -194,3 +194,29 @@ html {
         max width: 100%;
     }
 }
+
+
+
+.nav-links {
+    display: none; /* Initially hide menu for mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links.active {
+    display: flex; /* Show menu when active */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
