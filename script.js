@@ -1,8 +1,12 @@
-document.addEventListener("DOMContentLoaded", function() {
-    alert("Welcome to DotVision!");
-});
 
-function toggleMenu() {
+
+document.addEventListener("DOMContentLoaded", function () {
+    alert("Welcome to DotVision!");
+
     const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active");
-}
+    const toggleButton = document.querySelector(".menu-toggle");
+
+    toggleButton.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+});
