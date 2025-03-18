@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Show alert only if not seen before in this session
+    // Show alert only once per session
     if (!sessionStorage.getItem("welcomeShown")) {
         alert("Neural Queens welcomes you to DotVision!");
         sessionStorage.setItem("welcomeShown", "true"); // Store flag in sessionStorage
     }
-    
+
     const navLinks = document.getElementById("navLinks");
     const toggleButton = document.querySelector(".menu-toggle");
 
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
-
 
 // Display image preview
 document.getElementById("imageInput").addEventListener("change", function(event) {
@@ -31,7 +30,7 @@ document.getElementById("imageInput").addEventListener("change", function(event)
     }
 });
 
-// Upload image to AI model
+// Upload image to CNN Model API
 function uploadImage() {
     const fileInput = document.getElementById("imageInput");
     if (fileInput.files.length === 0) {
@@ -43,7 +42,10 @@ function uploadImage() {
     const formData = new FormData();
     formData.append("file", file);
 
-    fetch("https://your-ai-model-api.com/predict", {
+    // Show loading message
+    document.getElementById("outputText").innerText = "Processing image, please wait...";
+
+    fetch("http://127.0.0.1:5000/predict", { // Replace with your deployed API URL
         method: "POST",
         body: formData
     })
@@ -54,5 +56,7 @@ function uploadImage() {
     .catch(error => {
         console.error("Error:", error);
         alert("Failed to process the image.");
+        document.getElementById("outputText").innerText = "";
     });
 }
+
