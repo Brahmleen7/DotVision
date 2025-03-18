@@ -194,39 +194,26 @@ html {
         max width: 100%;
     }
 }
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    position: relative; /* Ensure it doesn't get hidden */
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-}
-
 .menu-toggle {
-    display: none; /* Hide toggle button on larger screens */
+    display: none; /* Hide toggle by default */
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
     position: absolute;
-    right: 20px; /* Adjust alignment */
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
 }
 
-/* Mobile Responsive Fix */
+/* Mobile-specific styles */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Show toggle button */
+        display: block; /* Show toggle button on mobile */
     }
 
     .nav-links {
-        display: none; /* Hide initially */
+        display: none; /* Hide menu initially */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -241,6 +228,7 @@ html {
         display: flex; /* Show menu when active */
     }
 }
+
 
 
 
