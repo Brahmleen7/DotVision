@@ -207,6 +207,7 @@ html {
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
+        z-index: 1000;
     }
 
     .nav-links {
