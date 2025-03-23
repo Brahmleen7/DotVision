@@ -2,3 +2,6 @@ flask
 tensorflow
 numpy
 opencv-python
+
+How to install : pip install -r requirements.txt
+
