@@ -6,7 +6,7 @@
     <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="logo.jpg">
-    <script defer src="script.js"></script>
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -32,6 +32,16 @@
             <a href="GetStarted.html" class="cta-button"> Get Started </a>
         </section>
     </div>
+
+    <!-- Image Upload Section -->
+    <section class="upload-section">
+        <h2>Upload an Image to Predict the Digit</h2>
+        <input type="file" id="imageInput">
+        <button onclick="uploadImage()">Predict</button>
+        <br><br>
+        <img id="imagePreview" style="display: none; width: 200px; height: auto;">
+        <h3 id="outputText"></h3>
+    </section>
     
     <footer class="footer">
         <div class="footer-container">
@@ -44,4 +54,3 @@
     </footer>
 </body>
 </html>
-
