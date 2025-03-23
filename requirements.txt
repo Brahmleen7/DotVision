@@ -4,5 +4,4 @@ numpy
 opencv-python
 pillow
 
-How to install : pip install -r requirements.txt
 
