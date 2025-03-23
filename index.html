@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.jpg">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <h1>DotVision</h1>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="AboutUs.html">About</a>
+            <a href="OurVision.html">Our Vision</a>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </nav>
+
+    <div class="outbox">
+        <img src="blind.jpg" alt="Blind Children" class="children"> 
+    
+        <section id="home" class="hero">
+            <h2>Welcome to <span class="dotvision">DotVision</span></h2>
+            <p>Empowering Touch, Enabling Vision</p>
+            <br>
+            <a href="GetStarted.html" class="cta-button"> Get Started </a>
+        </section>
+    </div>
+
+    <!-- Image Upload Section -->
+    <section class="upload-section">
+        <h2>Upload an Image to Predict the Digit</h2>
+        <input type="file" id="imageInput">
+        <button onclick="uploadImage()">Predict</button>
+        <br><br>
+        <img id="imagePreview" style="display: none; width: 200px; height: auto;">
+        <h3 id="outputText"></h3>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 DotVision. All rights reserved.</p>
+            <div class="footer-links">
+                <a>Privacy Policy</a> |
+                <a>Neural Queens</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
