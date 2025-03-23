@@ -16,11 +16,11 @@
 ### 🔹 Clone the Repository  
 ```bash
 git clone https://github.com/Brahmleen7/DotVision.git
-cd DotVision```
+cd DotVision ```
 
 ## Install Dependencies
 ```bash
-pip install -r flask_app/requirements.txt```
+pip install -r flask_app/requirements.txt ```
 
 ## Run the application
 ```bash
