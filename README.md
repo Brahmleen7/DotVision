@@ -28,15 +28,15 @@ python flask_app/app.py
 
 ### Project Structure
 DotVision/
-│── flask_app/
-│   ├── app.py             # Main Flask backend
-│   ├── requirements.txt   # Python dependencies
-│── frontend/
-│   ├── index.html         # Main web page
-│   ├── styles.css         # Styling
-│   ├── scripts.js         # JavaScript functions
-│── model_training/        # AI model training scripts
-│── README.md              # Project documentation
+│── flask_app/            # Backend (Flask API)
+│   ├── app.py            # Main Flask backend  
+│   ├── requirements.txt  # Python dependencies  
+│── frontend/             # Frontend Files  
+│   ├── index.html        # Main web page  
+│   ├── styles.css        # Styling  
+│   ├── scripts.js        # JavaScript functions  
+│── model_training/       # AI model training scripts  
+│── README.md             # Project documentation  
 
 ## 🤝 Contributing
 Pull requests are welcome! If you'd like to improve DotVision, feel free to submit a PR.
