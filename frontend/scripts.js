@@ -31,31 +31,30 @@ document.getElementById("imageInput").addEventListener("change", function(event)
 });
 
 // Upload image to CNN Model API
-function uploadImage() {
-    const fileInput = document.getElementById("imageInput");
-    if (fileInput.files.length === 0) {
-        alert("Please select an image first.");
+async function uploadImage() {
+    const fileInput = document.getElementById("imageInput").files[0];
+    if (!fileInput) {
+        alert("Please select an image!");
         return;
     }
 
-    const file = fileInput.files[0];
-    const formData = new FormData();
-    formData.append("file", file);
+    let formData = new FormData();
+    formData.append("file", fileInput);
 
     // Show loading message
     document.getElementById("outputText").innerText = "Processing image, please wait...";
 
-    fetch("http://127.0.0.1:5000/predict", { // Replace with your deployed API URL
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("outputText").innerText = "AI Output: " + data.result;
-    })
-    .catch(error => {
+    try {
+        let response = await fetch("https://your-app-name.onrender.com/predict", { // Replace with your deployed API URL
+            method: "POST",
+            body: formData
+        });
+
+        let data = await response.json();
+        document.getElementById("outputText").innerText = "AI Output: " + data.predicted_digit;
+    } catch (error) {
         console.error("Error:", error);
         alert("Failed to process the image.");
         document.getElementById("outputText").innerText = "";
-    });
+    }
 }
