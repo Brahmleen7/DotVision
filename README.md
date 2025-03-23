@@ -1,5 +1,4 @@
-###🌟 DotVision – Bringing Vision to the Visually Impaired 🌟
-# DotVision  
+### 🌟 DotVision – Bringing Vision to the Visually Impaired 🌟
 **An AI-powered web application for visually impaired users to recognize objects and text using image processing.**  
 
 ## 🚀 Features  
@@ -17,15 +16,15 @@
 ### 🔹 Clone the Repository  
 ```bash
 git clone https://github.com/Brahmleen7/DotVision.git
-cd DotVision
+cd DotVision```
 
 ## Install Dependencies
 ```bash
-pip install -r flask_app/requirements.txt
+pip install -r flask_app/requirements.txt```
 
 ## Run the application
 ```bash
-python flask_app/app.py
+python flask_app/app.py```
 
 ### Project Structure
 DotVision/
