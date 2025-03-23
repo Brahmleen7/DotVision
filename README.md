@@ -14,17 +14,17 @@
 
 ## 📦 Installation  
 ### 🔹 Clone the Repository  
-```bash
+
 git clone https://github.com/Brahmleen7/DotVision.git
-cd DotVision ```
+cd DotVision 
 
 ## Install Dependencies
-```bash
-pip install -r flask_app/requirements.txt ```
+
+pip install -r flask_app/requirements.txt 
 
 ## Run the application
-```bash
-python flask_app/app.py```
+
+python flask_app/app.py
 
 ### Project Structure
 DotVision/
@@ -38,14 +38,11 @@ DotVision/
 │── model_training/        # AI model training scripts
 │── README.md              # Project documentation
 
-##🤝 Contributing
+## 🤝 Contributing
 Pull requests are welcome! If you'd like to improve DotVision, feel free to submit a PR.
 
-##📜 License
+## 📜 License
 This project is licensed under the MIT License.
-
-🌟 DotVision – Bringing Vision to the Visually Impaired 🌟
-
 
 This README includes:  
 ✅ **Project Overview**  
