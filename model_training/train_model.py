@@ -2,13 +2,12 @@ import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropout
 from tensorflow.keras.utils import to_categorical
-import numpy as np
 
 # Load MNIST Dataset
 (X_train, y_train), (X_test, y_test) = tf.keras.datasets.mnist.load_data()
 
-# Normalize & Reshape
-X_train, X_test = X_train / 255.0, X_test / 255.0  
+# Normalize & Reshape Data
+X_train, X_test = X_train / 255.0, X_test / 255.0
 X_train = X_train.reshape(-1, 28, 28, 1)
 X_test = X_test.reshape(-1, 28, 28, 1)
 
@@ -17,7 +16,7 @@ num_classes = 10
 y_train = to_categorical(y_train, num_classes)
 y_test = to_categorical(y_test, num_classes)
 
-# Define Model
+# Define CNN Model
 model = Sequential([
     Conv2D(32, (3,3), activation='relu', input_shape=(28,28,1)),
     MaxPooling2D(pool_size=(2,2)),
@@ -35,6 +34,7 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 # Train Model
 model.fit(X_train, y_train, epochs=10, validation_data=(X_test, y_test))
 
-# Save Model in Recommended Format
-model.save("digit_recognition_model.keras")
+# Save Model in .keras Format
+model.save("model_training/digit_recognition_model.keras")
+
 print("✅ Model saved successfully as 'digit_recognition_model.keras'")
