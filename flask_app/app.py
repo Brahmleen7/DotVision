@@ -2,11 +2,13 @@ from flask import Flask, request, jsonify
 import numpy as np
 import tensorflow as tf
 import cv2
+import os
 
 app = Flask(__name__)
 
-# Load Trained Model
-model = tf.keras.models.load_model("digit_recognition_model.keras")
+model_path = os.path.join(os.getcwd(), "digit_recognition_model.keras")
+model = tf.keras.models.load_model(model_path)
+
 
 @app.route('/predict', methods=['POST'])
 def predict_digit():
